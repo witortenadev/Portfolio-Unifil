@@ -1,0 +1,39 @@
+@import url('colors.css');
+
+#reportContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.report {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.report img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+}
+.report h1, .report h2, .report h3, .report h4, .report h5, .report p {
+    color: var(--color-white);
+}
+.report p:nth-child(1) {
+    padding: 1rem;
+    background: var(--color-medium-gray);
+}
+.report a {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--color-dark-gray);
+    color: var(--color-white);
+    text-decoration: none;
+}
+.report a:hover {
+    background: var(--color-hover-gray);
+    transition: background 0.3s ease-in-out;
+}

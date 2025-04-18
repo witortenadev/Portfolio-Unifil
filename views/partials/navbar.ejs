@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="/css/navbar.css">
+<header>
+    <nav id="navbar">
+        <button id="mobile-menu-toggle" onclick="toggleMobileMenu()">
+            <img src="/images/menu-open.png" alt="Mobile Menu Toggle">
+        </button>
+        <ul>
+            <li>
+                <a href="/">Início</a>
+            </li>
+            <li>
+                <a href="/reportsList">Pensamento Computacional</a>
+            </li>
+            <li>
+                <a href="/aboutMe">Sobre mim</a>
+            </li>
+        </ul>
+        <button onclick="changeTheme()">
+            <img src="/images/night-mode.png" alt="Theme Change Button">
+        </button>
+    </nav>
+    <nav id="mobile-menu" class="hidden">
+        <ul>
+            <li>
+                <a href="/">Início</a>
+            </li>
+            <li>
+                <a href="/reportsList">Pensamento Computacional</a>
+            </li>
+            <li>
+                <a href="/aboutMe">Sobre mim</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<script>
+    const currentTheme = localStorage.getItem('theme') || 'theme-light';
+    const body = document.body;
+    body.classList.add(currentTheme);
+
+    function changeTheme() {
+        const body = document.body;
+        body.classList.toggle('theme-dark');
+
+        if (body.classList.contains('theme-dark')) {
+            localStorage.setItem('theme', 'theme-dark');
+        } else {
+            localStorage.setItem('theme', 'theme-light');
+        }
+    }
+
+    function toggleMobileMenu() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+        //change icon of buger menu
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const isHidden = mobileMenu.classList.contains('hidden');
+        mobileMenuToggle.innerHTML = isHidden ? '<img src="/images/menu-open.png" alt="Mobile Menu Toggle">' : '<img src="/images/menu-close.png" alt="Mobile Menu Toggle">';
+        
+    }
+</script>
