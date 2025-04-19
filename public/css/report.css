@@ -1,14 +1,10 @@
 @import url('colors.css');
 
 #reportDisplay * {
-    color: --var(--color-black);
+    color: var(--color-black);
     list-style: disc;
 }
-#reportDisplay {
-    padding: 2rem;
-}
 #imageDisplay {
-    padding: 2rem;
     display: flex;
     gap: 2rem;
     height: 40rem;
@@ -17,8 +13,6 @@
 }
 img {
     height: 100%;
-    display: block;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    object-fit: cover;
+    object-position: center;
 }
