@@ -6,13 +6,13 @@
 }
 #imageDisplay {
     display: flex;
-    gap: 2rem;
-    height: 40rem;
-    width: auto;
-    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
 }
 img {
-    height: 100%;
+    width: 100%;
     object-fit: cover;
     object-position: center;
 }

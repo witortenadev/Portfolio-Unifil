@@ -1,9 +1,9 @@
 @import url('colors.css');
 
 #reportContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
 }
 .report {
     cursor: pointer;
@@ -14,10 +14,10 @@
 }
 .report img {
     width: 100%;
-    height: auto;
-    max-height: 200px;
+    height: 100%;
     object-fit: cover;
     border: 1px solid var(--color-black);
+    max-height: 300px;
 }
 .report h1, .report h2, .report h3, .report h4, .report h5, .report p {
     color: var(--color-black);
