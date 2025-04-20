@@ -61,6 +61,7 @@ li {
 #mobile-menu {
   display: flex;
   background: var(--color-dark);
+  padding: 0 1rem;
 }
 
 #mobile-menu.hidden {

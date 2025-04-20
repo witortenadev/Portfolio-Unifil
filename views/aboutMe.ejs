@@ -62,11 +62,13 @@
             <% projects.forEach(function(project) { %>
                 <ul id="projects-list">
                     <li class="card top-accent">
-                        <h3><%= project.name %></h3>
-                        <p><%= project.description %></p>
-                        <a href=<%= project.url %> target="_blank">
-                            <button class="call-to-action-button">Visit <%= project.name %></button>
-                        </a>
+                        <div class="padded-container">
+                            <h3><%= project.name %></h3>
+                            <p><%= project.description %></p>
+                            <a href=<%= project.url %> target="_blank">
+                                <button class="call-to-action-button">Visit <%= project.name %></button>
+                            </a>
+                        </div>
                     </li>
                 </ul>
             <% }); %>

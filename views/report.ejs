@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relatorio</title>
+    <title id="page-title"></title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/15.0.7/marked.min.js" integrity="sha512-rPuOZPx/WHMHNx2RoALKwiCDiDrCo4ekUctyTYKzBo8NGA79NcTW2gfrbcCL2RYL7RdjX2v9zR0fKyI4U4kPew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/report.css">
@@ -23,15 +23,29 @@
         const reportDisplay = document.getElementById("reportDisplay");
         const imageDisplay = document.getElementById("imageDisplay");
         const titlebar = document.getElementById("title");
+        const pageTitle = document.getElementById("page-title");
 
         const params = new URLSearchParams(window.location.search)
         const reportId = params.get("reportId")
+        const reportType = params.get("reportType")
         
-        titlebar.innerText = `Relatório ${reportId}`
+        let URL = ""
+        switch (reportType) {
+            case "NPI":
+                titlebar.innerText = `Relatório ${reportId} - NPI`
+                pageTitle.innerText = `Relatório ${reportId} - NPI`
+                URL = "/NPI-reports"
+                break;
+            case "pensamento":
+                titlebar.innerText = `Relatório ${reportId} - Pensamento Computacional`
+                pageTitle.innerText = `Relatório ${reportId} - NPI`
+                URL = "/pensamento-computacional-reports"
+                break;
+        }
 
         // Render Report Text
         async function renderReport() {
-            const res = await fetch(`/reports/${reportId}`)
+            const res = await fetch(`${URL}/${reportId}`)
             const report = await res.text()
             reportDisplay.innerHTML = marked.parse(report)
         }
@@ -39,7 +53,7 @@
 
         // Render Report Image
         async function renderImage() {
-            const res = await fetch(`/reports/image/${reportId}`)
+            const res = await fetch(`${URL}/image/${reportId}`)
             const image = await res.blob()
             const imageURL = URL.createObjectURL(image)
             const imageElement = document.createElement("img")

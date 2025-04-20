@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pensamento Computacional</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="/js/renderNPIReports.js" defer></script>
+    <link rel="stylesheet" href="/css/reports.css">
+    <link rel="stylesheet" href="/css/global.css">
+</head>
+<body>
+    <%- include('partials/navbar') %>
+    <section>
+        <div class="container">
+            <h1>NPI</h1>
+            <p>Os Relatórios do Núcleo de Práticas de Informática são uma compilação das atividades e aprendizados realizados durante o curso, organizados de forma a facilitar o acompanhamento e a consulta futura.</p>
+            <p>Este é um espaço reservado para informações adicionais sobre os relatórios do NPI.</p>
+            <br>
+            <p>Os relatórios são divididos em semanas, cada uma com suas próprias atividades e aprendizados. Abaixo estão os cards para cada um dos relatórios:</p>
+        </div>
+    </section>
+    <section class="text-wrapper">
+            <h2>Relatórios - NPI:</h2>
+    </section>
+    <section>
+        <div id="reportContainer">
+            <!-- JS displays reports here -->
+        </div>
+    </section>
+    <%- include('partials/footer') %>
+</body>
+</html>

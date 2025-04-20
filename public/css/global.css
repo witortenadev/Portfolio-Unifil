@@ -6,6 +6,10 @@
 
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+*::selection {
+    background: var(--color-accent);
+    color: var(--color-white);
+}
 body {
     background: var(--color-light);
     color: var(--color-black);
@@ -106,6 +110,9 @@ a {
 }
 .card {
     border: 1px solid, var(--color-black);
+
+}
+.padded-container {
     padding: 1rem;
 }
 .top-accent {
