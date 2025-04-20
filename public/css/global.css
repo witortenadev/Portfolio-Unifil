@@ -48,6 +48,18 @@ h2 {
     flex-direction: column;
     justify-content: center;
 }
+.call-to-action-button {
+    background: var(--color-accent);
+    color: var(--color-white);
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+.call-to-action-button:hover {
+    background: var(--color-accent-dark);
+}
 .text-wrapper {
     padding: 0 2rem;
 }
@@ -60,6 +72,9 @@ h2 {
     }   
 }
 .card {
-    border: 1px solid black;
+    border: 1px solid, var(--color-black);
     padding: 1rem;
+}
+.top-accent {
+    border-top: 2px solid var(--color-accent);
 }

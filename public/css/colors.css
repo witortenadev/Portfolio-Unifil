@@ -8,6 +8,11 @@
     --color-dark-gray: #333333;
     --color-medium-gray: #444444;
     --color-hover-gray: #555555;
+    --color-accent: #0a1fdf;
+    --color-accent-dark: #0d1a94;
+    a {
+        color: var(--color-accent);
+    }
 }
 
 /* Dark Theme */
@@ -19,5 +24,10 @@
     --color-black: #ffffff;
     --color-dark-gray: #3d3d3d;
     --color-medium-gray: #4a4a4a;
-    --color-hover-gray: #2a2a2a;
+    --color-hover-gray: #414141;
+    --color-accent: #b87700;
+    --color-accent-dark: rgb(143, 109, 0);
+    a {
+        color: var(--color-accent);
+    }
 }

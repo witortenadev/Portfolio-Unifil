@@ -6,7 +6,7 @@ async function renderReports() {
     reports.forEach(async report => {
         const reportURL = `./report?reportId=${encodeURIComponent(report)}`
         const reportElement = document.createElement("div")
-        reportElement.className = "report"
+        reportElement.className = "report card"
         reportElement.href = reportURL
         const imageSrc = await renderImage(report);
         const reportContentRes = await fetch(`/reports/${report}`)

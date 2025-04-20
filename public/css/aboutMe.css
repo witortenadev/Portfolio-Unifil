@@ -1,6 +1,6 @@
-ul li{
+#groups-list li, #projects-list li {
     list-style: disc;
-    color: black;
+    color: var(--color-black);
 }
 #projects-list {
     padding: 0;
