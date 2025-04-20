@@ -60,7 +60,7 @@ a {
 .call-to-action-button {
     background: var(--color-accent);
     color: var(--color-white);
-    border: none;
+    border: 5px solid var(--color-accent-dark);
     padding: 0.5rem 1rem;
     font-size: 1rem;
     cursor: pointer;
