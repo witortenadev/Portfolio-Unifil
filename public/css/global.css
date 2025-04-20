@@ -60,6 +60,17 @@ a {
 .wrap-container {
     display: flex;
     flex-wrap: wrap;
+    gap: .5rem;
+}
+.inactive-button {
+    background: var(--color-accent-dark);
+    color: var(--color-white);
+    border: 5px solid var(--color-accent);
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: not-allowed;
+    transition: background 0.3s ease-in-out;
+    overflow: hidden;
 }
 .call-to-action-button {
     background: var(--color-accent);
@@ -69,6 +80,7 @@ a {
     font-size: 1rem;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
+    overflow: hidden;
 }
 .call-to-action-button a {
     color: var(--color-white);
@@ -95,7 +107,6 @@ a {
     padding: 0.5rem 1rem;
     width: fit-content;
     font-size: 0.8rem;
-    margin: 0.25rem;
 }
 .text-wrapper {
     padding: 0 2rem;
