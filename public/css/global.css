@@ -43,10 +43,19 @@ h2 {
     color: var(--color-black);
     margin: 1rem 0;
 }
+a {
+    color: var(--color-accent);
+    transition: color 0.3s ease-in-out;
+}
 .container {
     display: flex;
+    gap: .5rem;
     flex-direction: column;
     justify-content: center;
+}
+.wrap-container {
+    display: flex;
+    flex-wrap: wrap;
 }
 .call-to-action-button {
     background: var(--color-accent);
@@ -57,8 +66,32 @@ h2 {
     cursor: pointer;
     transition: background 0.3s ease-in-out;
 }
+.call-to-action-button a {
+    color: var(--color-white);
+    text-decoration: none;
+}
 .call-to-action-button:hover {
     background: var(--color-accent-dark);
+}
+.desguised-button {
+    background: transparent;
+    color: var(--color-black);
+    border: none;
+    padding: 0;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.desguised-button span {
+    color: var(--color-accent);
+}
+.tag {
+    background: var(--color-accent);
+    color: var(--color-white);
+    padding: 0.5rem 1rem;
+    width: fit-content;
+    font-size: 0.8rem;
+    margin: 0.25rem;
 }
 .text-wrapper {
     padding: 0 2rem;

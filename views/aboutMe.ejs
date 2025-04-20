@@ -11,16 +11,51 @@
     <%- include('partials/navbar') %>
     <section>
         <div class="container">
+            <!-- Who am I section -->
             <h1>Witor Tenã</h1>
             <p>Sou estudante de Ciência da Computação da Unifil.</p>
+            <h2>Quem sou eu?</h2>
+            <div class="tag">Full-Stack Dev</div>
+            <p>Meu nome é Witor Tenã, sou estudante de Ciência da Computação na Unifil. Desde pequeno sempre tive interesse por tecnologia e programação. Atualmente, estou focado em aprender mais sobre desenvolvimento web, estudando desenvolvimento Frontend tanto quanto o Backend.</p>
+            <p>Estou sempre buscando novos desafios e oportunidades para aprimorar minhas habilidades e contribuir para projetos interessantes.</p>
+
+            <!-- Contact section-->
+            <h2>Contato:</h2>
+            <form action="mailto:witortena@gmail.com">
+                <button type="submit" class="desguised-button">
+                    email: <span>witortena@gmail.com</span>
+                </button>
+            </form>
+            <p>celular: <a href="https://wa.me/5543984138592" target="_blank">(43) 9 8413-8592</a></p>
+            <p>Github: <a href="https://github.com/WitorDev/" target="_blank">https://github.com/WitorDev/</a></p>
+            
+            <!-- Tools section -->
+            <h2>Ferramentas e Tecnologias:</h2>
+            <!-- make .tags for html, css, js, react, nextjs, node, express, mongodb, tailwind, and git github -->
+            <div class="wrap-container">
+                <div class="tag">HTML</div>
+                <div class="tag">CSS</div>
+                <div class="tag">JavaScript</div>
+                <div class="tag">React</div>
+                <div class="tag">Next.js</div>
+                <div class="tag">Node.js</div>
+                <div class="tag">Express</div>
+                <div class="tag">MongoDB</div>
+                <div class="tag">Tailwind</div>
+                <div class="tag">Git</div>
+                <div class="tag">GitHub</div>
+            </div>
+            
+            <!-- Groups and attribuitions section -->
             <h2>Grupos e Participações:</h2>
             <ul id="groups-list">
                 <li>Grupo de IA</li>
                 <li>NPI - Núcleo de Práticas de Informática</li>
                 <li>Pensamento Computacional - Monitoramento de Alunos</li>
             </ul>
-            <h2>Projetos e Atribuições:</h2>
+            
             <!-- List through all Projects given by the server -->
+            <h2>Projetos e Atribuições:</h2>
             <% projects.forEach(function(project) { %>
                 <ul id="projects-list">
                     <li class="card top-accent">
