@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const projects = require('../projects/projects.js');
 
 router.get('/', (req, res) => {
     res.render('index');
@@ -14,7 +15,7 @@ router.get('/report', (req, res) => {
 });
 
 router.get('/aboutMe', (req, res) => {
-    res.render('aboutMe');
+    res.render('aboutMe', { projects });
 });
 
 module.exports = router;

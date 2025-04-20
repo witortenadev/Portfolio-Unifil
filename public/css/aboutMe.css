@@ -1,0 +1,10 @@
+ul li{
+    list-style: disc;
+    color: black;
+}
+#projects-list {
+    padding: 0;
+}
+#projects-list li {
+    list-style: none;
+}

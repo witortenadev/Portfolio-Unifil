@@ -1,5 +1,9 @@
 @import url("colors.css");
 
+header {
+  position: fixed;
+  width: 100%;
+}
 #navbar {
   display: flex;
   justify-content: space-between;
@@ -7,6 +11,9 @@
   background: var(--color-dark);
   padding: 0 2rem 0 0;
   margin: 0 auto;
+}
+#spacer {
+  padding-bottom: 4rem;
 }
 
 #navbar ul {
@@ -41,7 +48,7 @@
 #navbar a,
 ul,
 li {
-  padding: 1rem;
+  padding: .5rem;
   list-style: none;
   color: var(--color-white);
   text-decoration: none;
