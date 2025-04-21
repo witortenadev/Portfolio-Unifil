@@ -1,14 +1,42 @@
+    <link rel="stylesheet" href="/css/footer.css">
     <footer>
         <section>
             <img src="/images/Unifil.png" alt="Unifil Logo">
             <div class="container">
-                <p>Unifil - Witor Tenã.</p>
-                <p id="date"></p>
+                <p>Unifil</p>
+                <p>Witor Tenã</p>
             </div>
         </section>
+        <section id="navigation">
+            <div class="wrap-container">
+                <!-- Contacts -->
+                <div>
+                    <ul>
+                        <li>
+                            <form action="mailto:witortena@gmail.com">
+                                <button type="submit" class="desguised-button">
+                                    Email: <span>witortena@gmail.com</span>
+                                </button>
+                            </form>
+                        </li>
+                        <li>Celular: <a href="https://wa.me/5543984138592" target="_blank">(43) 9 8413-8592</a></li>
+                        <li>Github: <a href="https://github.com/WitorDev/" target="_blank">https://github.com/WitorDev/</a></li>
+                    </ul>
+                </div>    <!-- Navigation -->
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/pensamento-computacional">Pensamento Computacional</a></li>
+                    <li><a href="/npi">NPI</a></li>
+                    <li><a href="/aboutMe">Sobre mim</a></li>
+                </ul>
+            </div>
+        </section>
+        <div class="time">
+            <p id="date"></p>
+        </div>
     </footer>
     <script>
         const date = document.getElementById("date")
         const today = new Date().getFullYear()
-        date.innerHTML = today
+        date.innerHTML = `Londrina - PR, ${today}`
     </script>
