@@ -18,7 +18,9 @@ async function renderReports() {
                 <div class="padded-container">
                     <p>${report.split('.')[0]}</p>
                 </div>
-                <img src="${imageSrc}" alt="Report Image">
+                <div class="image-container">
+                    <img src="${imageSrc}" alt="Report Image">
+                </div>
                 <div class="padded-container">
                     <p>${reportContent}</p>
                 </div>
