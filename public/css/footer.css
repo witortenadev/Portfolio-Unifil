@@ -1,16 +1,20 @@
 @import url("colors.css");
 
 #navigation {
-  background: var(--color-dark-gray);
+  background: var(--color-light);
 }
 #navigation a {
     text-decoration: none;
 }
+#navigation li {
+  color: var(--color-black);
+}
 .time {
+  color: white;
   padding: 1rem 2rem;
 }
 @media (min-width: 1028px) {
-  footer section, footer .text-wrapper, footer .wrap-container .time {
+  footer section, footer .text-wrapper, footer .wrap-container, footer .time {
     margin: 0 auto;
     max-width: 65%;
   }
