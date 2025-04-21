@@ -17,9 +17,11 @@ async function renderReports() {
                 <div class="padded-container">
                     <p>${report.split('.')[0]}</p>
                 </div>
-                <div class="image-container">
-                    <img src="${imageSrc}" alt="Report Image">
-                </div>
+                ${imageSrc != null ? `
+                        <div class="image-container">
+                             <img src="${imageSrc}" alt="Report Image"></img>
+                        </div>
+                    ` : ''}
                 <div class="padded-container">
                     <p>${reportContent}</p>
                 </div>
@@ -30,6 +32,9 @@ async function renderReports() {
 
     async function renderImage(reportId) {
         const res = await fetch(`NPI-reports/image/${reportId}`)
+        if (!res.ok) {
+            return null
+        }
         const image = await res.blob()
         const imageURL = URL.createObjectURL(image)
         return imageURL
