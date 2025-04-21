@@ -1,5 +1,7 @@
 ## Introdução dos alunos ao Pensamento Computacional
 
+Professor(a): Kauan
+
 Nesta primeira aula, instruímos os alunos a se sentarem na frente da sala. Após a chegada de todos, foram apresentados ao professor Kauan e aos monitores da turma. Em seguida, também foram introduzidos à coordenadora Tânia.
 
 Após as apresentações, os alunos realizaram as provas de nivelamento, com o objetivo de serem alocados em turmas compatíveis com seu nível de conhecimento. Durante as provas, surgiram poucas dúvidas, que foram prontamente esclarecidas pelos monitores presentes em sala.
