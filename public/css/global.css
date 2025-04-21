@@ -6,6 +6,17 @@
 
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+code {
+    background: var(--color-dark-hover);
+    padding: 1rem;
+    font-size: 0.9rem;
+    margin: 1rem 0;
+}
+p code {
+    display: block;
+    overflow-x: auto;
+    white-space: pre-wrap;
+}
 *::selection {
     background: var(--color-accent);
     color: var(--color-white);

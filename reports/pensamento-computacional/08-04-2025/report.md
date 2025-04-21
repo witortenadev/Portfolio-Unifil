@@ -1,6 +1,6 @@
 ## Introdução dos alunos ao Pensamento Computacional
 
-Professor(a): Kauan
+` Professor(a): Kauan `
 
 Nesta primeira aula, instruímos os alunos a se sentarem na frente da sala. Após a chegada de todos, foram apresentados ao professor Kauan e aos monitores da turma. Em seguida, também foram introduzidos à coordenadora Tânia.
 
