@@ -29,23 +29,23 @@
         const reportId = params.get("reportId")
         const reportType = params.get("reportType")
         
-        let APIURL = ""
+        let URL = ""
         switch (reportType) {
             case "NPI":
                 titlebar.innerText = `Relatório ${reportId} - NPI`
                 pageTitle.innerText = `Relatório ${reportId} - NPI`
-                APIURL = "/NPI-reports"
+                URL = "/NPI-reports"
                 break;
             case "pensamento":
                 titlebar.innerText = `Relatório ${reportId} - Pensamento Computacional`
                 pageTitle.innerText = `Relatório ${reportId} - NPI`
-                APIURL = "/pensamento-computacional-reports"
+                URL = "/pensamento-computacional-reports"
                 break;
         }
 
         // Render Report Text
         async function renderReport() {
-            const res = await fetch(`${APIURL}/${reportId}`)
+            const res = await fetch(`${URL}/${reportId}`)
             const report = await res.text()
             reportDisplay.innerHTML = marked.parse(report)
         }
@@ -53,7 +53,7 @@
 
         // Render Report Image
         async function renderImage() {
-            const res = await fetch(`${APIURL}/image/${reportId}`)
+            const res = await fetch(`${URL}/image/${reportId}`)
             const image = await res.blob()
             const imageURL = URL.createObjectURL(image)
             const imageElement = document.createElement("img")
