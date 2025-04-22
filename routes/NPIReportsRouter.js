@@ -36,7 +36,10 @@ router.get('/image/:id', (req, res) => {
         return res.status(404).send('Report not found', reportPath);
     }
     if (!fs.existsSync(reportPath + "/report.jpg")) {
-        return res.status(404).send("Image not found");
+        if (!fs.existsSync(reportPath + "/report.png")) {
+            return res.status(404).send('Image not found', reportPath + "/report.jpg");
+        }
+        return res.sendFile(reportPath + "/report.png");
     }
     res.sendFile(reportPath + "/report.jpg");
 });
