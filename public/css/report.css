@@ -7,6 +7,9 @@
 #reportDisplay code{
     color: white;
 }
+#reportDisplay p {
+    margin: 1rem 0;
+}
 #imageDisplay {
     display: flex;
     flex-wrap: wrap;

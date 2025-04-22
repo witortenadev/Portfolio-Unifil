@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
             console.error('Error reading directory:', err);
             return res.status(500).send('Internal Server Error');
         }
-        const reports = files
+        const reports = files.reverse()
         res.json(reports);
     })
 });
