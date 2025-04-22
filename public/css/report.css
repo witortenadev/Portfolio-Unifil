@@ -4,6 +4,9 @@
     color: var(--color-black);
     list-style: disc;
 }
+#reportDisplay code{
+    color: white;
+}
 #imageDisplay {
     display: flex;
     flex-wrap: wrap;
