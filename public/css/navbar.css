@@ -3,6 +3,7 @@
 header {
   position: fixed;
   width: 100%;
+  z-index: 3;
 }
 #navbar {
   display: flex;
@@ -15,7 +16,6 @@ header {
 #spacer {
   padding-bottom: 4rem;
 }
-
 #navbar ul {
   display: flex;
   justify-content: space-between;
@@ -23,7 +23,6 @@ header {
   justify-content: space-between;
   background: var(--color-dark);
 }
-
 #navbar button {
     width: 2rem;
     height: 2rem;
