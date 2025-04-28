@@ -4,11 +4,14 @@
     color: var(--color-black);
     list-style: disc;
 }
-#reportDisplay code{
+#reportDisplay p code, #reportDisplay code{
     color: white;
 }
 #reportDisplay p {
     margin: 1rem 0;
+}
+.padded-container code {
+    color: white;
 }
 #imageDisplay {
     display: flex;
