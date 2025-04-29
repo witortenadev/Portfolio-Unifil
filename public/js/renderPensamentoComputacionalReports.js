@@ -27,7 +27,7 @@ async function renderReports() {
                     <p>${reportContent}</p>
                 </div>
             </a>`
-            
+
         reportContainer.appendChild(reportElement)
     });
 
