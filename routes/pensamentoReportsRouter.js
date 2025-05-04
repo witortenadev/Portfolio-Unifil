@@ -9,7 +9,12 @@ router.get('/', (req, res) => {
             console.error('Error reading directory:', err);
             return res.status(500).send('Internal Server Error');
         }
-        const reports = files.reverse()
+        const reports = files;
+        reports.sort((a, b) => {
+            const aDate = fs.statSync(path.join('./reports/pensamento-computacional', a)).mtime;
+            const bDate = fs.statSync(path.join('./reports/pensamento-computacional', b)).mtime;
+            return bDate - aDate; // Sort by modification date, newest first
+        });
         res.json(reports);
     })
 });
