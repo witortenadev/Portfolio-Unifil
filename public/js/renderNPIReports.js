@@ -4,9 +4,10 @@ async function renderReports() {
     const res = await fetch("NPI-reports")
     const reports = await res.json()
     reports.forEach(async report => {
-        const reportURL = `./report?reportType=NPI&reportId=${encodeURIComponent(report)}`;
+        const reportURL = `./report?reportType=NPI&reportId=${encodeURIComponent(report)}`
         const reportElement = document.createElement("div")
         reportElement.className = "report card"
+        reportElement.href = reportURL
         const imageSrc = await renderImage(report);
         const reportContentRes = await fetch(`NPI-reports/${report}`)
             .then(res => res.text())
@@ -17,16 +18,14 @@ async function renderReports() {
                 <div class="padded-container">
                     <p>${report.split('.')[0]}</p>
                 </div>
-                ${imageSrc != null ? `
-                        <div class="image-container">
-                             <img src="${imageSrc}" alt="Report Image"></img>
-                        </div>
-                    ` : ''}
+                ${imageSrc != null ?
+                    await imageRenderer(imageSrc)
+                    : ''}
                 <div class="padded-container">
                     <p>${reportContent}</p>
                 </div>
             </a>`
-            
+
         reportContainer.appendChild(reportElement)
     });
 
@@ -35,9 +34,17 @@ async function renderReports() {
         if (!res.ok) {
             return null
         }
-        const image = await res.blob()
-        const imageURL = URL.createObjectURL(image)
-        return imageURL
+        const imageData = await res.json()
+        const imageSrc = imageData[0].path
+        return imageSrc
+    }
+
+    async function imageRenderer(path) {
+        return `
+            <div class="image-container">
+                 <img src="${path}" alt="Report Image"></img>
+            </div>
+        `
     }
 }
 renderReports();

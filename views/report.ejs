@@ -28,7 +28,7 @@
         const params = new URLSearchParams(window.location.search)
         const reportId = params.get("reportId")
         const reportType = params.get("reportType")
-        
+
         let APIURL = ""
         switch (reportType) {
             case "NPI":
@@ -57,12 +57,19 @@
             if (!res.ok) {
                 return null
             }
-            const image = await res.blob()
-            const imageURL = URL.createObjectURL(image)
-            const imageElement = document.createElement("img")
-            imageElement.src = imageURL
-            imageElement.alt = "Report Image"
-            imageDisplay.appendChild(imageElement)
+            const images = await res.json()
+            const imagesPaths = images.map((image) => {
+                return image.path
+            })
+            console.log(imagesPaths)
+
+            imagesPaths.forEach((imagePath, i) => {
+                const imageElement = document.createElement("img")
+                imageElement.src = imagePath
+                imageElement.alt = "Report Image" + i
+                imageElement.classList.add("report-image")
+                imageDisplay.appendChild(imageElement)
+            })
         }
         renderImage()
     </script>

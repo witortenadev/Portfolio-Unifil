@@ -18,11 +18,9 @@ async function renderReports() {
                 <div class="padded-container">
                     <p>${report.split('.')[0]}</p>
                 </div>
-                ${imageSrc != null ? `
-                        <div class="image-container">
-                             <img src="${imageSrc}" alt="Report Image"></img>
-                        </div>
-                    ` : ''}
+                ${imageSrc != null ?
+                    await imageRenderer(imageSrc)
+                    : ''}
                 <div class="padded-container">
                     <p>${reportContent}</p>
                 </div>
@@ -36,9 +34,17 @@ async function renderReports() {
         if (!res.ok) {
             return null
         }
-        const image = await res.blob()
-        const imageURL = URL.createObjectURL(image)
-        return imageURL
+        const imageData = await res.json()
+        const imageSrc = imageData[0].path
+        return imageSrc
+    }
+
+    async function imageRenderer(path) {
+        return `
+            <div class="image-container">
+                 <img src="${path}" alt="Report Image"></img>
+            </div>
+        `
     }
 }
 renderReports();

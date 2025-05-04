@@ -4,17 +4,12 @@ const fs = require('fs');
 const path = require('path');
 
 router.get('/', (req, res) => {
-    fs.readdir('./reports/pensamento-computacional', (err, files) => {
+    fs.readdir('./public/reports/pensamento-computacional', (err, files) => {
         if (err) {
             console.error('Error reading directory:', err);
             return res.status(500).send('Internal Server Error');
         }
         const reports = files;
-        reports.sort((a, b) => {
-            const aDate = fs.statSync(path.join('./reports/pensamento-computacional', a)).mtime;
-            const bDate = fs.statSync(path.join('./reports/pensamento-computacional', b)).mtime;
-            return bDate - aDate; // Sort by modification date, newest first
-        });
         res.json(reports);
     })
 });
@@ -24,7 +19,7 @@ router.get('/:id', (req, res) => {
     if (!reportId) {
         return res.status(400).send('Report ID is required');
     }
-    const reportPath = path.join(__dirname, '../reports/pensamento-computacional', reportId);
+    const reportPath = path.join(__dirname, '../public/reports/pensamento-computacional', reportId);
     if (!fs.existsSync(reportPath)) {
         return res.status(404).send('Report not found', reportPath);
     }
@@ -32,21 +27,29 @@ router.get('/:id', (req, res) => {
 });
 
 router.get('/image/:id', (req, res) => {
+    // Get the report ID from the request parameters
     const reportId = req.params.id;
+
+    // Check if the report ID is provided
     if (!reportId) {
         return res.status(400).send('Report ID is required');
     }
-    const reportPath = path.join(__dirname, '../reports/pensamento-computacional', reportId);
+
+    // Get all images if any from the report folder
+    const reportPath = path.join(__dirname, '../public/reports/pensamento-computacional', reportId);
     if (!fs.existsSync(reportPath)) {
         return res.status(404).send('Report not found', reportPath);
     }
-    if (!fs.existsSync(reportPath + "/report.jpg")) {
-        if (!fs.existsSync(reportPath + "/report.png")) {
-            return res.status(404).send('Image not found', reportPath + "/report.jpg");
-        }
-        return res.sendFile(reportPath + "/report.png");
+    const images = fs.readdirSync(reportPath).filter(file => /\.(jpg|jpeg|png)$/i.test(file));
+    if (images.length === 0) {
+        return res.status(404).send('Image not found', reportPath + "/report.jpg");
     }
-    res.sendFile(reportPath + "/report.jpg");
+    // Send all images if any
+    // make object with all images and send it as json
+    const imagesObject = images.map(image => {
+        return { name: image, path: path.join("./reports/pensamento-computacional/" + reportId + "/", image) };
+    });
+    res.status(200).json(imagesObject);
 });
 
 module.exports = router;
