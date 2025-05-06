@@ -16,7 +16,7 @@ async function renderReports() {
         reportElement.innerHTML = `
             <a href="${reportURL}">
                 <div class="padded-container">
-                    <p>${report.split('.')[0]}</p>
+                    <p>${report.split('_')[1].replace("-", "/").replace("-", "/")}</p>
                 </div>
                 ${imageSrc != null ?
                     await imageRenderer(imageSrc)

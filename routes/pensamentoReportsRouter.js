@@ -49,7 +49,7 @@ router.get('/image/:id', (req, res) => {
     const imagesObject = images.map(image => {
         return { name: image, path: path.join("./reports/pensamento-computacional/" + reportId + "/", image) };
     });
-    res.status(200).json(imagesObject);
+    res.status(200).json(imagesObject.reverse());
 });
 
 module.exports = router;
