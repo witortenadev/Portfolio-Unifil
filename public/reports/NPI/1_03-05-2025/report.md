@@ -1,12 +1,12 @@
-# Jornada de 11 Semanas — Desenvolvimento Web & Participação Universitária
+## Jornada de 11 Semanas — Desenvolvimento Web & Participação Universitária
 
-## Semana 1 – Primeiros Passos
+### Semana 1 – Primeiros Passos
 
 - Conheci colegas e padrinhos, escolhi um padrinho para me orientar ao longo do curso.
 - Apresentei projetos pessoais feitos com **JavaScript, HTML, CSS, React (com Vite.js e Tailwind), Express.js e Node.js**.
 - Retomei os estudos em **fundamentos do React**.
 
-## Semana 2 – Primeiro Projeto com Next.js e Integração com API
+### Semana 2 – Primeiro Projeto com Next.js e Integração com API
 
 - Criei o **PiBookstore**, meu primeiro projeto com **Next.js**.
 - Ajudei colegas com dúvidas em **JS e CSS**.
@@ -14,13 +14,13 @@
 - Implementei **tratamento de erros**, **estados de carregamento** e técnicas modernas de React.
 - Desenvolvi um **projeto de teste com autenticação** usando **JWT (JSON Web Tokens)** em uma **API REST com Express.js (Node.js)**.
 
-## Semana 2-4 – Desenvolvimento do Projeto de Blog
+### Semana 2-4 – Desenvolvimento do Projeto de Blog
 
 - Desenvolvi um sistema de **blog completo com CRUD e autenticação JWT**.
 - Backend feito com **Express.js**; frontend com **Next.js + React + Tailwind CSS**.
 - Incluiu **criação, edição e exclusão de posts e comentários**.
 
-## Semanas 5–11 – Conclusão e Expansão de Habilidades
+### Semanas 5–11 – Conclusão e Expansão de Habilidades
 
 - Pausei o desenvolvimento do blog para explorar outros interesses e **ajudar colegas**.
 - Aprofundei conhecimentos em **Git (merge)**, **Promises**, `async/await` e `try/catch` no **JavaScript**.

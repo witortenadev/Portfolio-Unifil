@@ -32,13 +32,13 @@
         let APIURL = ""
         switch (reportType) {
             case "NPI":
-                titlebar.innerText = `Relatório ${reportId} - NPI`
-                pageTitle.innerText = `Relatório ${reportId} - NPI`
+                titlebar.innerText = `Relatório ${reportId.split("_")[1].replace("-", "/").replace("-", "/")} - NPI`
+                pageTitle.innerText = `Relatório ${reportId.split("_")[1].replace("-", "/").replace("-", "/")} - NPI`
                 APIURL = "/NPI-reports"
                 break;
             case "pensamento":
-                titlebar.innerText = `Relatório ${reportId} - Pensamento Computacional`
-                pageTitle.innerText = `Relatório ${reportId} - NPI`
+                titlebar.innerText = `Relatório ${reportId.split("_")[1].replace("-", "/").replace("-", "/")} - Pensamento Computacional`
+                pageTitle.innerText = `Relatório ${reportId.split("_")[1].replace("-", "/").replace("-", "/")} - NPI`
                 APIURL = "/pensamento-computacional-reports"
                 break;
         }
