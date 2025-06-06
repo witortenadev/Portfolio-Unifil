@@ -1,4 +1,6 @@
-## Jornada de 11 Semanas — Desenvolvimento Web & Participação Universitária
+## Jornada de 11 Semanas — Desenvolvimento Web & Participação durante o Curso de CC
+
+`Da semana 0 até semana 11`
 
 ### Semana 1 – Primeiros Passos
 
