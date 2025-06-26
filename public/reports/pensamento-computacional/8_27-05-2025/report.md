@@ -1,6 +1,6 @@
 ## Páginas em HTML
 
-` Professor(a): Mariani `
+` Professor(a): Marianni `
 
 Hoje os alunos começaram a desenvolver seus próprios sites, a professora mostrou durante a aula como as tags do HTML são usadas para estruturar a página, além disso também instruiu os alunos a criarem sua conta no github, os explicando como ele pode ser usado para salvar seus projetos e atividades da aula.
 Foi passada uma atividade onde os alunos precisavam utilizar as tags, h1, p, img e title, estava ajudando o Marcos, aluno da fila da qual estava, mostrei a ele algumas outras tags, como hr além de dar uma introdução à CSS, onde ele utilizou de estilos para organizar melhor o conteúdo da página. O aluno, Marcos, mostrou-se interessado ao ver que podia fazer sua própria página web utilizando as ferramentas mostradas em sala, acredito que vai aprender rápido os conteúdos de web.

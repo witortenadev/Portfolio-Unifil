@@ -1,6 +1,6 @@
 ## Funções
 
-` Professor(a): Mariani `
+` Professor(a): Marianni `
 
 Na aula de hoje os alunos foram introduzidos à funções e seu uso na abstração de blocos complexos de código. Por meio dela puderam resolver problemas mais complexos organizando seu código em blocos reutilizáveis.
 No início da aula de hoje a professora mostrou aos alunos como as funções podem ser usadas no código, depois disso iniciaram suas atividades no code.org, usando as funções para resolver problemas complexos. Tiveram dificuldades de entender seu funcionamento no início das atividades, mas os instrutores os auxiliaram com suas dúvidas e foi possível seguirmos para as próximas atividades.

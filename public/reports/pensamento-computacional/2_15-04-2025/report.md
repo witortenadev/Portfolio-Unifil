@@ -1,6 +1,6 @@
 ## Lógica e seu uso na solução de problemas
 
-` Professor(a): Mariani `
+` Professor(a): Marianni `
 
 A aula teve seu início com a ajuda dos monitores instruindo os alunos a escolherem as cadeiras da frente da sala. Após isso, a professora Marianne mostrou alguns conteúdos iniciais de lógica, mostrando exemplos e interagindo com os alunos por meio de perguntas pertinentes à aula. Alguns dos alunos eram bem participativos e estavam se divertindo com o conteúdo apresentado e as perguntas da professora.
 

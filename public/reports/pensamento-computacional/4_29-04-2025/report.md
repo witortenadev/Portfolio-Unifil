@@ -1,6 +1,6 @@
 ## Blocos de Repetição
 
-` Professor(a): Mariani `
+` Professor(a): Marianni `
 
 Hoje os alunos seguiram com as atividades do code.org após uma explicação da professora sobre blocos de repetição aninhados, assim como condicionais aninhadas.
 A aula seguiu bem, e os alunos receberam seus crachás, os que não receberam tiveram seus nomes anotados para que no futuro o recebam.

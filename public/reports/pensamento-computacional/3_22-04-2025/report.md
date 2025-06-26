@@ -1,6 +1,6 @@
 ## Pixels e Ângulos
 
-` Professor(a): Mariani `
+` Professor(a): Marianni `
 
 Na aula de hoje, os alunos foram introduzidos ao conceito de pixels e ângulos por meio de atividades práticas e interativas. No início da aula, alguns alunos da minha fileira enfrentaram dificuldades para acessar suas contas no code.org, pois haviam esquecido suas credenciais. Como resultado, precisaram refazer as atividades anteriores após a conclusão do conteúdo planejado para o dia.
 
