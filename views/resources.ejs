@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pensamento Computacional</title>
+    <link rel="stylesheet" href="/css/reports.css">
+    <link rel="stylesheet" href="/css/global.css">
+</head>
+<body>
+    <%- include('partials/navbar') %>
+    <section>
+        <div class="container">
+        <h1>Recursos</h1>
+        <p>Recursos - Websites utilizados durante a monitoria do pensamento computacional.</p>
+        </div>
+    </section>
+    <section>
+      <% resources.forEach(function(resource) { %>
+        <ul>
+            <li class="card top-accent">
+                <div class="padded-container">
+                    <h3><%= resource.name %></h3>
+                    <p><%= resource.description %></p>
+                    <a href=<%= resource.url %> target="_blank">
+                        <button class="call-to-action-button">Visit <%= resource.name %></button>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    <% }); %>
+    </section>
+    <%- include('partials/footer') %>
+</body>
+</html>

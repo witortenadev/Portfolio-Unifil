@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const projects = require('../projects/projects.js');
+const resources = require('../public/resources/resources.js');
 
 router.get('/', (req, res) => {
     res.render('index');
@@ -20,6 +21,10 @@ router.get('/NPI', (req, res) => {
 
 router.get('/aboutMe', (req, res) => {
     res.render('aboutMe', { projects });
+});
+
+router.get('/resources', (req, res) => {
+    res.render('resources', { resources });
 });
 
 module.exports = router;
