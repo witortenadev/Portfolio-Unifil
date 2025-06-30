@@ -9,6 +9,8 @@
 }
 #reportDisplay p {
     margin: 1rem 0;
+    font-size: 14pt;
+    line-height: 1.5;
 }
 .padded-container code {
     color: white;
