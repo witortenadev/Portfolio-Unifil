@@ -4,7 +4,7 @@
 
 ### Ao longo desse tempo abrangi meus estudos em diversas áreas da tecnologia:
 
-#### RedHat
+### RedHat
 
 Iniciei o curso de **Gerenciamento de Sistemas com Red Hat**, com foco no uso do terminal para administração geral do sistema. Estudei:
   - Gerenciamento de permissões de usuários e grupos;
@@ -14,17 +14,17 @@ Iniciei o curso de **Gerenciamento de Sistemas com Red Hat**, com foco no uso do
   - Programas como vim (VI Improved);
   - Diversos comandos de terminal para administração eficiente.
 
-#### Visita EstaCenter
+### Visita EstaCenter
 
 Visitei a empresa EstaCenter de Londrina, onde tive oportunidade de conversar com o chefe de desenvolvimento e TI, nos mostrou como a tecnologia mudou a empresa e como por meio dela trabalham com seus clientes e parceiros, gerenciando estacionamento de carros por meio de soluções tecnológicas, o que foi de muito agrado para os alunos que participaram da visita, nos dando um **insight** em como empresas utilizam essas tecnologias em ambientes e situações reais para resolver problemas e inovar.
 
-#### Linux
+### Linux
 
 Me acostumei com o uso do Sistema Linux, estudando e usando o sistema para entender a um nível mais fundo como à maquina funciona por meio do SO (Sistema Operacional).
 
 Ajudei um amigo a realizar a instalação Dual Boot das distribuições Linux Ubunto e Lux em sua nova máquina.
 
-#### WEB e Programação
+### WEB e Programação
 
 Atualizei o Portfólio da Unifil (Este Website) adicionando o suporte a imagens e adicionando novos conteúdos do meu tempo no monitoramento dos alunos, além de outras edições no Website.
 
@@ -34,21 +34,21 @@ Iniciei pequenos projetos em **HTML/CSS/JS** com colegas do **NPI** (Núcleo de 
 
 Desenvolvi projetos simples em **Java**, com foco na **Programação Orientada a Objetos (POO)**.
 
-#### Networking
+### Networking
 
 Entendi o funcionamento de **conexões SSH** e aprofundei meus conhecimentos em **redes de computadores**, estudando temas como:
   - IP, MAC Address e Subnetting;
   - Conceitos e funcionamento de **roteadores e switches**.
 
-#### Monitoramento
+### Monitoramento
 
 Durante as aulas do projeto de extensão **Pensamento Computacional**, atuei ajudando alunos com dúvidas e compartilhando curiosidades e truques sobre lógica de programação e desenvolvimento com HTML/CSS.
 
-#### IA
+### IA
 
 Estudei os princípios de Machine Learning, como **estruturas de dados** e **árvores de decisão**, com base no conteúdo abordado nos encontros do **Grupo de Inteligência Artificial**.
 
-#### Ciência da Computação
+### Ciência da Computação
 
 Acompanhei e estudei os conteúdos das disciplinas do curso, como:
   - Lógica de programação;

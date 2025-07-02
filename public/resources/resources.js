@@ -14,6 +14,21 @@ const resources = [
     description: "Uma plataforma para aprender lógica de programaćão de forma interativa.",
     url: "https://code.org/",
   },
+  {
+    name: "Digital Logic Sim",
+    description: "Um software que permite criar circuitos lógicos de forma digital.",
+    url: "https://sebastian.itch.io/digital-logic-sim",
+  },
+  {
+    name: "Google Colab",
+    description: "Permite abrir e editar Jupyter Notebooks em Python, ferramenta criada pelo Google",
+    url: "https://colab.research.google.com/",
+  },
+  {
+    name: "Kaggle",
+    description: "Acervo de Datasets e comunidade de Machine Learning & IA",
+    url: "https://www.kaggle.com/",
+  }
 ];
 
 module.exports = resources;
