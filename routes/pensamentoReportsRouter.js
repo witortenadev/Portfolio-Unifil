@@ -26,6 +26,36 @@ router.get('/:id', (req, res) => {
     res.sendFile(reportPath + "/report.md");
 });
 
+router.get('/resources/:id', (req,res) => {
+    const reportId = req.params.id;
+    if (!reportId) {
+        return res.status(400).send('Report ID is required');
+    }
+    const reportPath = path.join(__dirname, '../public/reports/pensamento-computacional', reportId);
+    if (!fs.existsSync(reportPath)) {
+        return res.status(404).send('Report not found', reportPath);
+    }
+    // return the resources json data
+    const resourcesPath = path.join(reportPath, 'resources.json');
+    if (!fs.existsSync(resourcesPath)) {
+        return res.status(404).json({ resources: [] });
+    }
+    fs.readFile(resourcesPath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Error reading resources file:', err);
+            return res.status(500).send('Internal Server Error');
+        }
+        try {
+            const resources = JSON.parse(data);
+            res.json(resources);
+            console.log("Resources for report " + reportId + " sent successfully.");
+        } catch (parseError) {
+            console.error('Error parsing resources JSON:', parseError);
+            res.status(500).send('Internal Server Error');
+        }
+    });
+});
+
 router.get('/image/:id', (req, res) => {
     // Get the report ID from the request parameters
     const reportId = req.params.id;

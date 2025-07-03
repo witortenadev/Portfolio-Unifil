@@ -12,6 +12,9 @@
     <%- include('partials/navbar') %>
     <section>
         <h1 id="title"></h1>
+        <div class="resourceDisplay">
+            <!-- JS displays the resource here -->
+        </div>
         <div id="imageDisplay">
             <!-- JS displays the image here -->
         </div>
@@ -72,6 +75,32 @@
             })
         }
         renderImage()
+
+        async function renderResources() {
+            const res = await fetch(`${APIURL}/resources/${reportId}`)
+            if (!res.ok) {
+                return null
+            }
+            const resourceList = await res.json();
+            const resources = resourceList.resources;
+            console.log(resources)
+            if (resources.length == 0) {
+                const noResourcesElement = document.createElement("p")
+                noResourcesElement.innerText = "Nenhum recurso encontrado."
+                document.querySelector(".resourceDisplay").appendChild(noResourcesElement)
+                return
+            }
+            resources.forEach((resource) => {
+                const resourceElement = document.createElement("div")
+                resourceElement.innerHTML = `
+                    <a href="${resource.url}" target="_blank">
+                        <button class="call-to-action-button">Visit ${resource.name}</button>
+                    </a>
+                `
+                document.querySelector(".resourceDisplay").appendChild(resourceElement)
+            })
+        }
+        renderResources()
     </script>
     <%- include('partials/footer') %>
 </body>

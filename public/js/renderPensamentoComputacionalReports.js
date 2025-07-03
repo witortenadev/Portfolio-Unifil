@@ -6,7 +6,7 @@ async function renderReports() {
     reports.forEach(async report => {
         const reportURL = `./report?reportType=pensamento&reportId=${encodeURIComponent(report)}`
         const reportElement = document.createElement("div")
-        reportElement.className = "report card"
+        reportElement.className = "report card full-height"
         reportElement.href = reportURL
         const imageSrc = await renderImage(report);
         const reportContentRes = await fetch(`pensamento-computacional-reports/${report}`)
@@ -21,7 +21,7 @@ async function renderReports() {
                 ${imageSrc != null ?
                     await imageRenderer(imageSrc)
                     : ''}
-                <div class="padded-container">
+                <div class="padded-container full-height">
                     <p>${reportContent}</p>
                 </div>
             </a>`

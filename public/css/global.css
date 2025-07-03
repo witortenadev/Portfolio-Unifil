@@ -155,3 +155,9 @@ a {
 .section-container {
     margin: 5rem auto;
 }
+.resourceDisplay {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
