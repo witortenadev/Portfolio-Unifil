@@ -1,107 +1,128 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title id="page-title"></title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/15.0.7/marked.min.js" integrity="sha512-rPuOZPx/WHMHNx2RoALKwiCDiDrCo4ekUctyTYKzBo8NGA79NcTW2gfrbcCL2RYL7RdjX2v9zR0fKyI4U4kPew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="/css/global.css">
-    <link rel="stylesheet" href="/css/report.css">
-</head>
-<body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/marked/15.0.7/marked.min.js"
+      integrity="sha512-rPuOZPx/WHMHNx2RoALKwiCDiDrCo4ekUctyTYKzBo8NGA79NcTW2gfrbcCL2RYL7RdjX2v9zR0fKyI4U4kPew=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/report.css" />
+  </head>
+  <body>
     <%- include('partials/navbar') %>
     <section>
-        <h1 id="title"></h1>
-        <div class="resourceDisplay">
-            <!-- JS displays the resource here -->
-        </div>
-        <div id="imageDisplay">
-            <!-- JS displays the image here -->
-        </div>
-        <div id="reportDisplay">
-            <!-- JS displays the report here -->
-        </div>
+      <h1 id="title"></h1>
+      <div class="resourceDisplay">
+        <!-- JS displays the resource here -->
+      </div>
+      <div id="imageDisplay">
+        <!-- JS displays the image here -->
+      </div>
+      <div id="reportDisplay">
+        <!-- JS displays the report here -->
+      </div>
     </section>
     <script>
-        const reportDisplay = document.getElementById("reportDisplay");
-        const imageDisplay = document.getElementById("imageDisplay");
-        const titlebar = document.getElementById("title");
-        const pageTitle = document.getElementById("page-title");
+      const reportDisplay = document.getElementById("reportDisplay");
+      const imageDisplay = document.getElementById("imageDisplay");
+      const titlebar = document.getElementById("title");
+      const pageTitle = document.getElementById("page-title");
 
-        const params = new URLSearchParams(window.location.search)
-        const reportId = params.get("reportId")
-        const reportType = params.get("reportType")
+      const params = new URLSearchParams(window.location.search);
+      const reportId = params.get("reportId");
+      const reportType = params.get("reportType");
 
-        let APIURL = ""
-        switch (reportType) {
-            case "NPI":
-                titlebar.innerText = `Relatório ${reportId.split("_")[1].replace("-", "/").replace("-", "/")} - NPI`
-                pageTitle.innerText = `Relatório ${reportId.split("_")[1].replace("-", "/").replace("-", "/")} - NPI`
-                APIURL = "/NPI-reports"
-                break;
-            case "pensamento":
-                titlebar.innerText = `Relatório ${reportId.split("_")[1].replace("-", "/").replace("-", "/")} - Pensamento Computacional`
-                pageTitle.innerText = `Relatório ${reportId.split("_")[1].replace("-", "/").replace("-", "/")} - NPI`
-                APIURL = "/pensamento-computacional-reports"
-                break;
+      let APIURL = "";
+      switch (reportType) {
+        case "NPI":
+          titlebar.innerText = `Relatório ${reportId
+            .split("_")[1]
+            .replace("-", "/")
+            .replace("-", "/")} - NPI`;
+          pageTitle.innerText = `Relatório ${reportId
+            .split("_")[1]
+            .replace("-", "/")
+            .replace("-", "/")} - NPI`;
+          APIURL = "/NPI-reports";
+          break;
+        case "pensamento":
+          titlebar.innerText = `Relatório ${reportId
+            .split("_")[1]
+            .replace("-", "/")
+            .replace("-", "/")} - Pensamento Computacional`;
+          pageTitle.innerText = `Relatório ${reportId
+            .split("_")[1]
+            .replace("-", "/")
+            .replace("-", "/")} - NPI`;
+          APIURL = "/pensamento-computacional-reports";
+          break;
+      }
+
+      // Render Report Text
+      async function renderReport() {
+        const res = await fetch(`${APIURL}/${reportId}`);
+        const report = await res.text();
+        reportDisplay.innerHTML = marked.parse(report);
+      }
+      renderReport();
+
+      // Render Report Image
+      async function renderImage() {
+        const res = await fetch(`${APIURL}/image/${reportId}`);
+        if (!res.ok) {
+          return null;
         }
+        const images = await res.json();
+        const imagesPaths = images.map((image) => {
+          return image.path;
+        });
+        console.log(imagesPaths);
 
-        // Render Report Text
-        async function renderReport() {
-            const res = await fetch(`${APIURL}/${reportId}`)
-            const report = await res.text()
-            reportDisplay.innerHTML = marked.parse(report)
+        imagesPaths.forEach((imagePath, i) => {
+          const imageElement = document.createElement("img");
+          imageElement.src = imagePath;
+          imageElement.alt = "Report Image" + i;
+          imageElement.classList.add("report-image");
+          imageDisplay.appendChild(imageElement);
+        });
+      }
+      renderImage();
+
+      async function renderResources() {
+        const res = await fetch(`${APIURL}/resources/${reportId}`);
+        if (!res.ok) {
+          return null;
         }
-        renderReport()
-
-        // Render Report Image
-        async function renderImage() {
-            const res = await fetch(`${APIURL}/image/${reportId}`)
-            if (!res.ok) {
-                return null
-            }
-            const images = await res.json()
-            const imagesPaths = images.map((image) => {
-                return image.path
-            })
-            console.log(imagesPaths)
-
-            imagesPaths.forEach((imagePath, i) => {
-                const imageElement = document.createElement("img")
-                imageElement.src = imagePath
-                imageElement.alt = "Report Image" + i
-                imageElement.classList.add("report-image")
-                imageDisplay.appendChild(imageElement)
-            })
+        const resourceList = await res.json();
+        const resources = resourceList.resources;
+        console.log(resources);
+        if (resources.length == 0) {
+          const noResourcesElement = document.createElement("p");
+          noResourcesElement.innerText = "Nenhum recurso encontrado.";
+          document
+            .querySelector(".resourceDisplay")
+            .appendChild(noResourcesElement);
+          return;
         }
-        renderImage()
-
-        async function renderResources() {
-            const res = await fetch(`${APIURL}/resources/${reportId}`)
-            if (!res.ok) {
-                return null
-            }
-            const resourceList = await res.json();
-            const resources = resourceList.resources;
-            console.log(resources)
-            if (resources.length == 0) {
-                const noResourcesElement = document.createElement("p")
-                noResourcesElement.innerText = "Nenhum recurso encontrado."
-                document.querySelector(".resourceDisplay").appendChild(noResourcesElement)
-                return
-            }
-            resources.forEach((resource) => {
-                const resourceElement = document.createElement("div")
-                resourceElement.innerHTML = `
+        resources.forEach((resource) => {
+          const resourceElement = document.createElement("div");
+          resourceElement.innerHTML = `
                     <a href="${resource.url}" target="_blank">
-                        <button class="call-to-action-button">Visit ${resource.name}</button>
+                        <button class="call-to-action-button">${resource.name}</button>
                     </a>
-                `
-                document.querySelector(".resourceDisplay").appendChild(resourceElement)
-            })
-        }
-        renderResources()
+                `;
+          document
+            .querySelector(".resourceDisplay")
+            .appendChild(resourceElement);
+        });
+      }
+      renderResources();
     </script>
     <%- include('partials/footer') %>
-</body>
+  </body>
 </html>
