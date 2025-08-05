@@ -1,6 +1,6 @@
 ## De volta às aulas, revendo o que aprendemos
 
-`Professor(a): Marianni`
+`Professor(a): Kawan e Marianni`
 
 Voltamos das férias!, com a volta ao Pensamento Computacional, duas turmas se juntaram para a aula de hoje, com isso o professor **Kawan** junto da professora **Marianni** ministraram a aula, apresentando aos alunos dois questionários sobre os conteúdos que estavam aprendendo em suas últimas aulas, fizeram isso por meio das plataformas **Kahoot** e **Quizizz**.
 

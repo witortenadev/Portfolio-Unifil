@@ -1,50 +1,72 @@
 const reportContainer = document.getElementById("reportContainer");
 
 async function renderReports() {
-    const res = await fetch("pensamento-computacional-reports")
-    const reports = await res.json()
-    reports.forEach(async report => {
-        const reportURL = `./report?reportType=pensamento&reportId=${encodeURIComponent(report)}`
-        const reportElement = document.createElement("div")
-        reportElement.className = "report card full-height"
-        reportElement.href = reportURL
-        const imageSrc = await renderImage(report);
-        const reportContentRes = await fetch(`pensamento-computacional-reports/${report}`)
-            .then(res => res.text())
-            .catch(err => console.error(err))
-        const reportContent = marked.parse(reportContentRes.split('\n').slice(0, 6).join('\n'))
-        reportElement.innerHTML = `
+  const res = await fetch("pensamento-computacional-reports");
+  const reports = await res.json();
+
+  // alinhar reports de acordo com a data do maior para o menor.
+  function parseDateFromString(str) {
+    // Get only the part after "_" => day-month-year
+    const datePart = str.split("_")[1];
+    const [day, month, year] = datePart.split("-").map(Number);
+    return new Date(year, month - 1, day);
+  }
+
+  reports.sort((a, b) => parseDateFromString(b) - parseDateFromString(a));
+  console.log(reports);
+  //
+
+  reports.forEach(async (report) => {
+    const reportURL = `./report?reportType=pensamento&reportId=${encodeURIComponent(
+      report
+    )}`;
+    const reportElement = document.createElement("div");
+    reportElement.className = "report card full-height";
+    reportElement.href = reportURL;
+    const imageSrc = await renderImage(report);
+    const reportContentRes = await fetch(
+      `pensamento-computacional-reports/${report}`
+    )
+      .then((res) => res.text())
+      .catch((err) => console.error(err));
+    const reportContent = marked.parse(
+      reportContentRes.split("\n").slice(0, 6).join("\n")
+    );
+    reportElement.innerHTML = `
             <a href="${reportURL}">
                 <div class="padded-container">
-                    <p>${report.split('_')[1].replace("-", "/").replace("-", "/")}</p>
+                    <p>${report
+                      .split("_")[1]
+                      .replace("-", "/")
+                      .replace("-", "/")}</p>
                 </div>
-                ${imageSrc != null ?
-                    await imageRenderer(imageSrc)
-                    : ''}
+                ${imageSrc != null ? await imageRenderer(imageSrc) : ""}
                 <div class="padded-container full-height">
                     <p>${reportContent}</p>
                 </div>
-            </a>`
+            </a>`;
 
-        reportContainer.appendChild(reportElement)
-    });
+    reportContainer.appendChild(reportElement);
+  });
 
-    async function renderImage(reportId) {
-        const res = await fetch(`pensamento-computacional-reports/image/${reportId}`)
-        if (!res.ok) {
-            return null
-        }
-        const imageData = await res.json()
-        const imageSrc = imageData[0].path
-        return imageSrc
+  async function renderImage(reportId) {
+    const res = await fetch(
+      `pensamento-computacional-reports/image/${reportId}`
+    );
+    if (!res.ok) {
+      return null;
     }
+    const imageData = await res.json();
+    const imageSrc = imageData[0].path;
+    return imageSrc;
+  }
 
-    async function imageRenderer(path) {
-        return `
+  async function imageRenderer(path) {
+    return `
             <div class="image-container">
                  <img src="${path}" alt="Report Image"></img>
             </div>
-        `
-    }
+        `;
+  }
 }
 renderReports();
