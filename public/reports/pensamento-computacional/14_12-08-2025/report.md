@@ -1,4 +1,4 @@
-## Tabelas e Mídia
+## Na prática - Tabelas e Mídia
 
 `Professor(a): Kawan e Marianni`
 

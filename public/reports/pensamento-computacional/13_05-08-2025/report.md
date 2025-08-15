@@ -1,4 +1,4 @@
-## Tabelas e Mídia
+## A Teoria - Tabelas e Mídia
 
 `Professor(a): Kawan e Marianni`
 
