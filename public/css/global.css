@@ -1,163 +1,173 @@
-@import url('colors.css');
+@import url("colors.css");
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 code {
-    background: var(--color-dark-hover);
-    padding: 1rem;
-    font-size: 0.9rem;
-    margin: 1rem 0;
+  background: var(--color-dark-hover);
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin: 1rem 0;
 }
 p code {
-    display: block;
-    overflow-x: auto;
-    white-space: pre-wrap;
+  display: block;
+  overflow-x: auto;
+  white-space: pre-wrap;
 }
 *::selection {
-    background: var(--color-accent);
-    color: var(--color-white);
+  background: var(--color-accent);
+  color: var(--color-white);
 }
 body {
-    background: var(--color-light);
-    color: var(--color-black);
-    font-size: 1rem;
-    line-height: 1.5;
+  background: var(--color-light);
+  color: var(--color-black);
+  font-size: 1rem;
+  line-height: 1.5;
 }
 section {
-    padding: 2rem;
-    background: var(--color-light);
-    margin: 0 auto;
+  padding: 2rem;
+  background: var(--color-light);
+  margin: 0 auto;
 }
 footer {
-    background: var(--color-dark);
+  background: var(--color-dark);
 }
 footer section {
-    gap: 2rem;
-    display: flex;
-    color: var(--color-white);
-    padding: 2rem;
-    background: var(--color-dark);
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
+  gap: 2rem;
+  display: flex;
+  color: var(--color-white);
+  padding: 2rem;
+  background: var(--color-dark);
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
 }
 footer img {
-    width: 3rem;
-    height: 3rem;
+  width: 3rem;
+  height: 3rem;
 }
 h1 {
-    font-size: 2rem;
-    color: var(--color-black);
+  font-size: 2rem;
+  color: var(--color-black);
 }
 h2 {
-    font-size: 1.5rem;
-    color: var(--color-black);
-    margin: 1rem 0;
+  font-size: 1.5rem;
+  color: var(--color-black);
+  margin: 1rem 0;
 }
 a {
-    color: var(--color-accent);
-    transition: color 0.3s ease-in-out;
-    width: fit-content;
+  color: var(--color-accent);
+  transition: color 0.3s ease-in-out;
+  width: fit-content;
 }
 .container {
-    display: flex;
-    gap: .5rem;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  justify-content: center;
 }
 .wrap-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: .5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 .inactive-button {
-    background: var(--color-accent-dark);
-    color: var(--color-white);
-    border: 5px solid var(--color-accent);
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    cursor: not-allowed;
-    transition: background 0.3s ease-in-out;
-    overflow: hidden;
+  background: var(--color-accent-dark);
+  color: var(--color-white);
+  border: 5px solid var(--color-accent);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: not-allowed;
+  transition: background 0.3s ease-in-out;
+  overflow: hidden;
 }
 .call-to-action-button {
-    background: var(--color-accent);
-    color: var(--color-white);
-    border: 5px solid var(--color-accent-dark);
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
-    overflow: hidden;
+  background: var(--color-accent);
+  color: var(--color-white);
+  border: 5px solid var(--color-accent-dark);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  overflow: hidden;
 }
 .call-to-action-button a {
-    color: var(--color-white);
-    text-decoration: none;
+  color: var(--color-white);
+  text-decoration: none;
 }
 .call-to-action-button:hover {
-    background: var(--color-accent-dark);
+  background: var(--color-accent-dark);
 }
 .desguised-button {
-    background: transparent;
-    color: var(--color-black);
-    border: none;
-    padding: 0;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  background: transparent;
+  color: var(--color-black);
+  border: none;
+  padding: 0;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 .desguised-button span {
-    color: var(--color-accent);
+  color: var(--color-accent);
 }
 .tag {
-    background: var(--color-accent);
-    color: var(--color-white);
-    padding: 0.5rem 1rem;
-    width: fit-content;
-    font-size: 0.8rem;
+  background: var(--color-accent);
+  color: var(--color-white);
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  font-size: 0.8rem;
 }
 .text-wrapper {
-    padding: 0 2rem;
+  padding: 0 2rem;
 }
 @media (min-width: 1028px) {
-    section {
-        width: 65%;
-    }
-    footer section {
-        width: 65%;
-    }
+  section {
+    width: 65%;
+  }
+  footer section {
+    width: 65%;
+  }
 }
 .card {
-    border: 1px solid, var(--color-black);
+  border: 1px solid, var(--color-black);
 }
 .padded-container {
-    padding: 1rem;
+  padding: 1rem;
 }
 .top-accent {
-    border-top: 2px solid var(--color-accent);
+  border-top: 2px solid var(--color-accent);
 }
 .header {
-    max-height: 150px;
-    z-index: 2;
+  max-height: 150px;
+  z-index: 2;
 }
 .bg-image {
-    background-image: url('/images/background.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    width: 100%;
-    position: relative;
+  background-image: url("/images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.bg-photo {
+  background-image: url("/images/photo.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 200px;
+  height: 250px;
+  position: relative;
+  border-radius: 15px;
 }
 .section-container {
-    margin: 5rem auto;
+  margin: 5rem auto;
 }
 .resourceDisplay {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
 }
