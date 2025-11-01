@@ -1,4 +1,4 @@
-## **Jornada de 4 Semanas -**
+## **Jornada de 4 Semanas - Aluno Tutor e AI4**
 
 `Da semana 22 até semana 31`
 
@@ -9,6 +9,7 @@ Fomos introduzidos ao Google Tutor, onde poderiamos estar ajudando alunos e prof
 ### **Apresentação AI4 Cybersecurity - AI & Cloud**
 
 Durante os encontros do grupo de IA o professor Ricardo nos falou sobre a AI4, um evento que reune vários profissionais da área de IA para trazer as novidades e pensamentos sobre o futuro da IA.
+Visualizamos algumas gravações do evento e tivemos a oportunidade de realizar uma apresentação sobre o que foi conversado nelas, nos dividimos em grupos e cada um ficou com um tema diferente, no meu caso, fiquei com o seguinte tema: Cloud & IA. os outros colegas do grupo de IA também realizaram suas apresentações, e todas mostraram uma ligação entre si, o que foi ótimo para entendermos como os conceitos passados nos encontros anteriores funcionam em ambientes reais mostrando a importância de cada área explorada no contexto de Inteligência Artificial.
 
 ### **Algebra Linear**
 

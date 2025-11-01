@@ -1,31 +1,39 @@
-@import url('colors.css');
+@import url("colors.css");
 
 #reportDisplay * {
-    color: var(--color-black);
-    list-style: disc;
+  color: var(--color-black);
+  list-style: disc;
 }
-#reportDisplay p code, #reportDisplay code{
-    color: white;
+.header {
+  background-color: var(--color-accent);
+  padding: 1rem;
+}
+#reportDisplay p code,
+#reportDisplay code {
+  color: white;
+}
+#title {
+  color: white;
 }
 #reportDisplay p {
-    margin: 1rem 0;
-    font-size: 14pt;
-    line-height: 1.5;
+  margin: 1rem 0;
+  font-size: 14pt;
+  line-height: 1.5;
 }
 .padded-container code {
-    color: white;
+  color: white;
 }
 #imageDisplay {
-    overflow-y: scroll;
-    max-height: 500px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    margin: 2rem 0;
+  overflow-y: scroll;
+  max-height: 720px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
 }
 img {
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }

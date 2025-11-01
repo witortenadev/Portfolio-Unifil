@@ -1,10 +1,10 @@
-## **Jornada de 4 Semanas -**
+## **Jornada de 4 Semanas - Circuitos, Pensamento Computacional e IA**
 
 `Da semana 18 até semana 22`
 
 ### **IA**
 
-Realizei atividades relacionadas à inteligência artificial, onde analisei um **Dataset** e um ****Jupyter Notebook**** (ferramenta que permite compartilhar e executar de forma interativa um processo, dividindo o código em blocos).
+Realizei atividades relacionadas à inteligência artificial, onde analisei um **Dataset** e um \***\*Jupyter Notebook\*\*** (ferramenta que permite compartilhar e executar de forma interativa um processo, dividindo o código em blocos).
 
 Este **Dataset** e **Jupyter Notebook** foram encontrados no **Kaggle**, website com um grande acervo de diferentes Datasets e Jupyter Notebooks dos mesmos em diversos temas.
 
@@ -33,7 +33,7 @@ Além disso, realizamos várias atividades de **Matemática Discreta**, com os s
 
 ### **Projeto Interdisciplinar**
 
-Também tivemos atividades da unidade curricular **Projeto Interdisciplinar**, onde os alunos da turma se dividiram em grupos para apresentar ideias sobre o tema *Lista de afazeres*. A proposta simulou uma apresentação real, como as que vemos em **hackathons** e eventos similares, onde os criadores do projeto têm tempo limitado para apresentar e "vender" sua ideia.
+Também tivemos atividades da unidade curricular **Projeto Interdisciplinar**, onde os alunos da turma se dividiram em grupos para apresentar ideias sobre o tema _Lista de afazeres_. A proposta simulou uma apresentação real, como as que vemos em **hackathons** e eventos similares, onde os criadores do projeto têm tempo limitado para apresentar e "vender" sua ideia.
 
 Cada grupo desenvolveu protótipos de média fidelidade para seus aplicativos utilizando a ferramenta **Figma**, os quais foram apresentados em slides para o restante da turma.
 
@@ -46,7 +46,7 @@ Durante as aulas de **Organização de Computadores**, os alunos puderam entende
 - OR
 - XOR
 
-Após essa introdução, passamos a raciocinar de forma lógica para entender como utilizar essas portas para criar outras mais complexas. Estudamos também como utilizá-las para desenvolver componentes capazes de realizar operações matemáticas por meio da *Aritmética Booleana*, como o **half adder**, que realiza a soma entre dois bits. Assim, desenvolvemos nosso entendimento até conseguirmos construir uma **ALU** (*Arithmetic and Logical Unit* – Unidade Lógica e Aritmética).
+Após essa introdução, passamos a raciocinar de forma lógica para entender como utilizar essas portas para criar outras mais complexas. Estudamos também como utilizá-las para desenvolver componentes capazes de realizar operações matemáticas por meio da _Aritmética Booleana_, como o **half adder**, que realiza a soma entre dois bits. Assim, desenvolvemos nosso entendimento até conseguirmos construir uma **ALU** (_Arithmetic and Logical Unit_ – Unidade Lógica e Aritmética).
 
 A ALU é capaz de realizar operações lógicas e aritméticas a partir dos dados de entrada do usuário. Ela precisa apenas dos dados a serem processados e de um sinal de controle, para que o processamento e o resultado das operações sejam corretamente roteados para a saída. Isso é feito por meio de **multiplexadores** (MUX – dentre diversas saídas, seleciona apenas uma entrada) e **demultiplexadores** (DEMUX – dentre diversas entradas, seleciona apenas uma saída), que permitem à ALU direcionar os dados para as portas corretas, gerando a saída desejada.
 

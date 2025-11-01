@@ -1,0 +1,14 @@
+{
+  "resources": [
+    {
+      "name": "MDPI - Artigos",
+      "description": "Acervo de Artigos e publicação.",
+      "url": "https://www.mdpi.com/"
+    },
+    {
+      "name": "Figma",
+      "description": "Ferramenta de prototipação.",
+      "url": "https://www.figma.com/"
+    }
+  ]
+}

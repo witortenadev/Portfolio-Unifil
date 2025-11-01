@@ -1,4 +1,4 @@
-## Jornada de 11 Semanas — Desenvolvimento Web & Participação durante o Curso de CC
+## Jornada de 11 Semanas — Desenvolvimento Web & Participação durante o Curso de CC (Ciência da Computação)
 
 `Da semana 0 até semana 11`
 
@@ -32,7 +32,7 @@
 - Participei de dois programas:
   - **Pensamento Computacional** (projeto de extensão) onde monitorei alunos em suas aulas e auxiliar o(a) professor(a) em sala em conteúdos de tecnologia, programação, lógica e desenvolvimento de aplicativos.
   - **Grupo de Estudos de IA**, onde aprendi **Python** e desenvolvi uma **árvore de decisão** com bibliotecas.
-  Assim como aumentei meu entendimento sobre a preparação de um banco de dados para seu treinamento e uso, como preparar um banco com dados ruidosos, dados faltantes e dados errôneos ou despreparados.
+    Assim como aumentei meu entendimento sobre a preparação de um banco de dados para seu treinamento e uso, como preparar um banco com dados ruidosos, dados faltantes e dados errôneos ou despreparados.
 
 ### 💼 Projetos e Ferramentas
 
